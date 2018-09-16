@@ -1,0 +1,25 @@
+@(latitude: String, longitude: String, location:String)
+
+ <html> 
+     <head> 
+         <title>Tweets by Location</title> 
+         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.min.css")"> 
+         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/mdb.min.css")"> 
+         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/myCustomStyle.css")"> 
+         <script src="@routes.Assets.at("javascripts/jquery-3.3.1.js")" type="text/javascript" ></script> 
+         <script src="@routes.Assets.at("javascripts/locationTweets.js")" type="text/javascript" ></script> 
+     </head> 
+
+     <body class="jumbotron text-center"> 
+         <input type="hidden" value="@routes.HomeController.getTweetsByLocation(latitude,longitude,location)" id="locationTweets">
+         <br> 
+         <br>
+         <div id="locationTweetDiv">
+             <p>
+                     Tweets by Location- @location
+                 </p>
+         </div>
+     </body> 
+ </html> 
+
+

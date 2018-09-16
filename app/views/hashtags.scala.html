@@ -1,0 +1,24 @@
+@(tag: String)
+
+<html>
+    <head>
+        <title>Tweets by Hashtag</title>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/mdb.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/myCustomStyle.css")">
+        <script src="@routes.Assets.at("javascripts/jquery-3.3.1.js")" type="text/javascript" ></script>
+        <script src="@routes.Assets.at("javascripts/hashtag.js")" type="text/javascript" ></script>
+    </head>
+
+    <body class="jumbotron text-center">
+        <input type="hidden" value="@routes.HomeController.getTweetsByHashtag(tag)" id="hashtagTweets">
+        <br>
+        <br>
+        <div id="hashTagDiv">
+            <p>
+                Tweets by Hashtag- @tag
+            </p>
+        </div>
+
+    </body>
+</html>

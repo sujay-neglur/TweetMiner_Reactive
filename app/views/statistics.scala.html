@@ -1,0 +1,25 @@
+@(topic:String)
+
+<html>
+    <head>
+        <title>User Tweets</title>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/mdb.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/myCustomStyle.css")">
+        <script src="@routes.Assets.at("javascripts/jquery-3.3.1.js")" type="text/javascript" ></script>
+        <script src="@routes.Assets.at("javascripts/statistics.js")" type="text/javascript" ></script>
+    </head>
+
+    <body>
+        <input type="hidden" value="@routes.HomeController.getTweetStatistics(topic)" id="statisticsTweets">
+        <div class="container text-center" id="statHeader">
+                <div class="jumbotron text-center">
+                    Statistics for search term - @topic <br><br>
+                    <div class="card-text" id="statistics">
+                    </div>
+                </div>
+        </div>
+
+
+    </body>
+</html>
